@@ -8,6 +8,19 @@ class TestCircunferencia < Test::Unit::TestCase
 		@circle = Circunferencia.new()
 	end
     
+    def teardown
+	end
+    
+	# Si el test es correcto
+	def test_correcto
+		assert_equal(12, @circle.rad(75.36) )
+	end
+    
+	# Si el test no es correcto
+	def test_incorrecto
+		assert_equal(10, @circle.rad(75.36) )
+	end
+    
 
     
 end
